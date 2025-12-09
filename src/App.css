@@ -1,0 +1,91 @@
+/* =============================== */
+/*      Animated Luxury Layout     */
+/* =============================== */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-family: 'Poppins', sans-serif;
+
+  /* Multicolor Liquid Gradient */
+  background: linear-gradient(-45deg, 
+      #ff6fd8, #3813c2, #2afadf, #4c83ff, #ff9a8b);
+  background-size: 500% 500%;
+  animation: liquidBG 14s ease infinite;
+}
+
+@keyframes liquidBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* =============================== */
+/*      Floating Glass Card        */
+/* =============================== */
+
+.MuiFormControl-root {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  padding: 20px 26px;
+  border-radius: 20px;
+
+  /* Neon Glow */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(255, 255, 255, 0.4);
+
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+
+/* =============================== */
+/*        Premium Gradient Btn     */
+/* =============================== */
+
+.MuiButton-root {
+  padding: 14px 36px !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  border-radius: 16px !important;
+  text-transform: none !important;
+  letter-spacing: 0.5px;
+
+  /* Multi-gradient glow button */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4) !important;
+  color: #1a1a1a !important;
+
+  box-shadow:
+    0 8px 20px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.6);
+
+  transition: 0.3s ease !important;
+}
+
+/* Hover: Floating + Glow Burst */
+.MuiButton-root:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 12px 30px rgba(255, 255, 255, 0.45),
+    0 0 25px rgba(255, 255, 255, 0.85);
+}
+
+
+/* =============================== */
+/*      Global Smooth Effects      */
+/* =============================== */
+
+* {
+  transition: all 0.3s ease-in-out;
+}
